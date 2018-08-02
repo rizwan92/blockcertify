@@ -40,7 +40,7 @@ export class HomePage extends Component {
   render() {
     return (
       <div>
-           <h3 style={{color:'white'}}>Welcome</h3>
+           <h3 style={{color:'white'}}>Welcome To Caste Certificate Verification System</h3>
       <div style={{display:'flex',justifyContent:'center'}}> 
           <form action="#">
           <div className="mdl-card mdl-shadow--2dp" style={{display:'flex',flexDirection:'column',margin:40,height:'inherit',padding:10,borderRadius:10}}> 
@@ -69,7 +69,7 @@ export class HomePage extends Component {
       <div className="mdl-card mdl-shadow--2dp" style={{display:'flex',flexDirection:'column',margin:40,padding:10,borderRadius:10,justifyContent:'space-between'}}> 
           <h6 style={{color:'RGB(0,153,153)'}}>Citizen Login</h6>
           <div style={{color:'red'}}>{this.state.errorc === '' ? '' : this.state.error}</div>
-          <img src="./citizen.png" style={{width:150,height:150}} />
+          <img src="./citizen.png" style={{width:150,height:150}} alt="citizen"/>
           <label className="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" 
           htmlFor="checkbox-1"
           style={{width:200,marginTop:10,fontSize:12}}>

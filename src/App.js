@@ -52,6 +52,7 @@ class App extends Component {
           >
             <center className="page-content">
               <Route exact path="/" component={HomePage} />
+              <Route exact path="/blockcertify" component={HomePage} />
               <Route exact path="/admin" component={AdminHome} />
               <Route exact path="/issue" component={IssueCertificate} />
               <Route exact path="/verify" component={VerifiRecords} />
