@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import ReactLoading from 'react-loading';
 
 export class HomePage extends Component {
 
@@ -9,6 +10,7 @@ export class HomePage extends Component {
     password:'',
     error:'',
     terms:false,
+    loading:false,
   }
 
   onChange =(e)=>this.setState({[e.target.id]:e.target.value})
@@ -21,7 +23,11 @@ export class HomePage extends Component {
     this.setState({error:''})
     if (username === 'sdoraipur@cg.gov.in' && password === '12345') {
       localStorage.setItem('auth',"true")
-      this.props.history.push('/admin')
+      this.setState({loading:true},()=>{
+        setTimeout(()=>{
+          this.props.history.push('/admin')
+        },2000)
+      })
     }else{
       this.setState({error:'Invalid Credentials'})
     }  
@@ -33,14 +39,26 @@ export class HomePage extends Component {
     })
     this.setState({errorc:'Please Accept The Terms and Conditions'})
     if (terms) {
-      this.props.history.push('/verify')
+      this.setState({loading:true},()=>{
+        setTimeout(()=>{
+          this.props.history.push('/verify')
+        },2000)
+      })
+      
     }else{
     }
   }
   render() {
+    if (this.state.loading) {
+      return (
+          <div style={{width:'100%',height:"80vh",justifyContent:'center',alignItems:'center',display:'flex'}}>
+        <ReactLoading type={'cubes'} color={'teal'}  height={70} width={150} />
+        </div>
+      )
+  }
     return (
       <div>
-           <h3 style={{color:'white'}}>Welcome To Caste Certificate Verification System</h3>
+           <h3 style={{color:'black'}}>Welcome To Caste Certificate Verification System</h3>
       <div style={{display:'flex',justifyContent:'center'}}> 
           <form action="#">
           <div className="mdl-card mdl-shadow--2dp" style={{display:'flex',flexDirection:'column',margin:40,height:'inherit',padding:10,borderRadius:10}}> 

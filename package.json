@@ -1,11 +1,14 @@
 {
-  "homepage": "http://teamtrimtab.github.io/blockcertify",
+  "homepage": "http://rizwan92.github.io/blockcertify",
   "name": "caste-certificate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "js-md5": "^0.7.3",
+    "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-loading": "^2.0.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },

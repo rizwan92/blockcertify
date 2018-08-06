@@ -14,6 +14,9 @@ class App extends Component {
     // window.componentHandler.upgradeDom();
   };
 
+
+
+
   render () {
     return (
       <div>
@@ -48,7 +51,7 @@ class App extends Component {
           </header>
           <main
             className="mdl-layout__content "
-            style={{backgroundColor: '#34495e'}}
+            style={{backgroundColor: '#efefef'}}
           >
             <center className="page-content">
               <Route exact path="/" component={HomePage} />
@@ -58,6 +61,10 @@ class App extends Component {
               <Route exact path="/verify" component={VerifiRecords} />
             </center>
           </main>
+        </div>
+        <div id="demo-toast-example" className="mdl-js-snackbar mdl-snackbar">
+          <div className="mdl-snackbar__text" style={{fontSize:20}} /> 
+          <button className="mdl-snackbar__action" type="button" />
         </div>
       </div>
     );
