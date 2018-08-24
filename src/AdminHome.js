@@ -11,7 +11,7 @@ export class AdminHome extends Component {
     if (this.state.loading) {
       return (
           <div style={{width:'100%',height:"80vh",justifyContent:'center',alignItems:'center',display:'flex'}}>
-        <ReactLoading type={'cubes'} color={'teal'}  height={70} width={150} />
+        <ReactLoading type={'spinningBubbles'} color={'teal'}  height={70} width={150} />
         </div>
       )
   }

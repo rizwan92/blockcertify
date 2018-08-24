@@ -6,6 +6,7 @@ import  AdminHome  from './AdminHome';
 import { withRouter } from 'react-router-dom'
 import IssueCertificate  from './IssueCertificate';
 import  VerifiRecords  from './VerifyRecords';
+import  Invalid  from './Invalid';
 
 class App extends Component {
 
@@ -59,6 +60,7 @@ class App extends Component {
               <Route exact path="/admin" component={AdminHome} />
               <Route exact path="/issue" component={IssueCertificate} />
               <Route exact path="/verify" component={VerifiRecords} />
+              <Route exact path="/invalid" component={Invalid} />
             </center>
           </main>
         </div>

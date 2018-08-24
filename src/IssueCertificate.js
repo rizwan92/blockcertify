@@ -200,7 +200,7 @@ export class IssueCertificate extends Component {
                   this.state.loading === 2? 
                         <div style={{width:200,height:100,display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
                       <ReactLoading type={'cubes'} color={'teal'} height={40} width={80} />
-                      <p style={{position:'absolute',bottom:0}}>Writing on Blockchain</p>
+                      {/* <p style={{position:'absolute',bottom:0}}>Writing on Blockchain</p> */}
                       </div>
                       :
                   <img src="./qrcode.png" alt="qrcode"  style={{Width:70,height:70}} />
@@ -241,7 +241,7 @@ export class IssueCertificate extends Component {
 
                {this.state.loading === 3 ? 
                 <button className="mdl-button mdl-js-button" style={{backgroundColor:'RGB(0,153,153)',color:'#fff',margin:10}}
-                onClick={(e)=>this.showSnackBar('Print krna hai')}>
+                onClick={(e)=>this.showSnackBar('Printer Not Connected')}>
                 Print 
                 </button>
                 :
